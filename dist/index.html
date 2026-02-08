@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHADER//STEPS</title>
+  <script type="module" crossorigin src="/assets/index-CFBzumJ0.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CDNlKRjR.css">
+</head>
+<body>
+
+  <!-- Hidden WebGL2 canvas — all rendering happens here -->
+  <canvas id="gl-canvas" width="640" height="360" style="display:none;"></canvas>
+
+  <!-- Top bar -->
+  <header id="top-bar">
+    <span class="logo">SHADER//STEPS</span>
+    <div class="controls">
+      <button id="btn-reset" class="btn">[ RESET ]</button>
+      <button id="btn-playpause" class="btn">[ ▶ PLAY ]</button>
+      <span id="time-display" class="time">0.00s</span>
+    </div>
+  </header>
+
+  <!-- Canvas row — dynamically populated -->
+  <section id="canvas-row"></section>
+
+  <!-- Editor section -->
+  <section id="editor-section">
+    <div id="tab-bar"></div>
+    <div id="editor-container"></div>
+    <div id="channel-config">
+      <label>iCh0:<select class="ch-select" data-ch="0"><option value="">None</option></select></label>
+      <label>iCh1:<select class="ch-select" data-ch="1"><option value="">None</option></select></label>
+      <label>iCh2:<select class="ch-select" data-ch="2"><option value="">None</option></select></label>
+      <label>iCh3:<select class="ch-select" data-ch="3"><option value="">None</option></select></label>
+    </div>
+    <div id="compile-row">
+      <button id="btn-compile" class="btn">[ COMPILE ]</button>
+    </div>
+    <pre id="error-output">&gt; errors: none</pre>
+  </section>
+
+  <!-- Maximize overlay -->
+  <div id="maximize-overlay" class="hidden">
+    <canvas id="maximize-canvas"></canvas>
+    <button id="maximize-close" class="btn">[ CLOSE ]</button>
+  </div>
+
+</body>
+</html>
